@@ -71,7 +71,7 @@ h1
 {
     text-align: center;
 }
-  @media(max-width:360px) 
+  /* @media(max-width:360px) 
   {
     .calculator
     {
@@ -94,5 +94,5 @@ h1
     {
         height: 380px;  
     }
-  }
+  } */
 
