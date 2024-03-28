@@ -71,7 +71,7 @@ h1
 {
     text-align: center;
 }
-@media (max-width: 402px) {
+@media (max-width: 555px) {
     .calculator {
         margin-left: 10px;
         padding: 10px;
