@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-    <div class="container ">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-4 calculator-container shadow-lg p-3 mb-5 bg-body rounded">
                 <h2 class="text-center mb-4">Calculator</h2>
@@ -29,7 +29,10 @@
                     <button type="button" class="btn btn-primary btn-block" onclick="performOperation('multiply')">Multiplication</button>
                     <button type="button" class="btn btn-primary btn-block" onclick="performOperation('divide')">Division</button>
                 </form>
-                <div id="result" class="mt-4"></div>
+                <div class="mt-4">
+                        <h3 id="result" >Result:</h3>
+                </div>
+               
                 <footer class="bg-body-tertiary text-center text-lg-start">
                     <!-- Copyright -->
                     <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.05);">
@@ -68,6 +71,7 @@
                     result = "Invalid operation";
             }
 
+          
             document.getElementById("result").innerHTML = "Result: " + result;
         }
     </script>
