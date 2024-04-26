@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .calculator-container {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-4 calculator-container">
+                <h2 class="text-center mb-4">Calculator</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="firstValue">First Value: </label>
+                        <input type="text" class="form-control" id="firstValue" placeholder="Enter first value">
+                    </div>
+                    <div class="form-group">
+                        <label for="secondValue">Second Value:</label>
+                        <input type="text" class="form-control" id="secondValue" placeholder="Enter second value">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="performOperation('add')">Addition</button>
+                    <button type="button" class="btn btn-primary btn-block" onclick="performOperation('subtract')">Subtraction</button>
+                    <button type="button" class="btn btn-primary btn-block" onclick="performOperation('multiply')">Multiplication</button>
+                    <button type="button" class="btn btn-primary btn-block" onclick="performOperation('divide')">Division</button>
+                </form>
+                <div id="result" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function performOperation(operation) {
+            var firstValue = parseFloat(document.getElementById("firstValue").value);
+            var secondValue = parseFloat(document.getElementById("secondValue").value);
+            var result;
+
+            switch(operation) {
+                case 'add':
+                    result = firstValue + secondValue;
+                    break;
+                case 'subtract':
+                    result = firstValue - secondValue;
+                    break;
+                case 'multiply':
+                    result = firstValue * secondValue;
+                    break;
+                case 'divide':
+                    result = firstValue / secondValue;
+                    break;
+                default:
+                    result = "Invalid operation";
+            }
+
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
