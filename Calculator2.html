@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="./CSS/calculator.css">
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom CSS */
-        .calculator-container {
-            margin-top: 100px;
-        }
+    
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container ">
         <div class="row justify-content-center">
-            <div class="col-md-4 calculator-container">
+            <div class="col-md-4 calculator-container shadow-lg p-3 mb-5 bg-body rounded">
                 <h2 class="text-center mb-4">Calculator</h2>
                 <form>
                     <div class="form-group">
@@ -33,6 +30,14 @@
                     <button type="button" class="btn btn-primary btn-block" onclick="performOperation('divide')">Division</button>
                 </form>
                 <div id="result" class="mt-4"></div>
+                <footer class="bg-body-tertiary text-center text-lg-start">
+                    <!-- Copyright -->
+                    <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.05);">
+                      © 2024 Copyright:
+                      <a class="text-body" href="https://mdbootstrap.com/">Nilesh Chougule</a>
+                    </div>
+                    <!-- Copyright -->
+                  </footer>
             </div>
         </div>
     </div>
