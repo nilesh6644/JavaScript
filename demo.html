@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="firstvalue" placeholder="Enter first value">
+    <input type="text" id="secondvalue" placeholder="Enter second value">
+    <button onclick="performoperation('add')">Addition</button>
+    <button onclick="performoperation('sub')">Substarction</button>
+    <button onclick="performoperation('mul')">Multiplication</button>
+    <button onclick="performoperation('div')">Division</button>
+    <div class="result">
+        <h1 id="result">Result:</h1>
+    </div>
+
+
+
+    <script>
+       function performoperation(operation)
+       {
+          switch(operation)
+          {
+            case 'add':
+                result=firstvalue+secondvalue;
+            break;
+            case 'sub':
+                result=firstvalue-secondvalue;
+            break;
+            case 'mul':
+                result=firstvalue*secondvalue;
+            break;
+            case 'div':
+                result=firstvalue/secondvalue;
+            break;
+          }
+       } 
+
+    </script>
+</body>
+</html>
